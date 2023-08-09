@@ -1,0 +1,30 @@
+1. Как отказаться от изменений в файле (файлах), находящихся в рабочем каталоге (work directory)?
+ git checkout -- <filename>
+
+2. Как вернуть файл из индекса в рабочий каталог?
+ git restore --staged <filename>
+
+3. Как отменить ошибочный commit?
+ git reset HEAD~.  git reset --hard HEAD~.
+
+4. Как исправить commit, отправленный на сервер GitHub?
+ git commit --amend
+
+5. Как создать новую ветку и переключиться в нее?
+ git checkout -b <branchname>.
+
+6. Как создать git репозиторий из локального каталога на своем компьютере и отправить его на GitHub?
+git init
+git add
+git commit -m "Initial commit"
+git remote add origin <repository_url>, git branch -M main, git push -u origin main
+
+7. Как получить на локальный компьютер изменения с github.com?
+git pull origin <branchname>
+
+8. Какую информацию нам дают команды:
+
+git status: Показывает текущий статус рабочей директории и индекса (какие файлы изменены, добавлены или удалены).
+git log: Показывает историю коммитов (список всех коммитов) с деталями.
+git remote -v: Показывает список удаленных репозиториев и их URL.
+git branch -v: Показывает список веток с последним коммитом в каждой из них.
